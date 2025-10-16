@@ -7,6 +7,6 @@ public class Pikachu extends Pokemon{
     @Override
     public void attack(Pokemon target) {
         //System.out.println(getName() + " -> " + target.getName()); //name is private
-        System.out.println(name + " -> " + target.getName() + "에게 '백만볼트' 사용!"); //name is protected
+        System.out.println(name + " -> " + target.getName() + "에게 '10만볼트' 사용!"); //name is protected
     }
 }
