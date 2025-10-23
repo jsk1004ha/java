@@ -2,14 +2,14 @@ public class GameDemo {
     public static void main(String[] args) {
         Jetpack jetpack = new Jetpack();
 
-        Pikachu p1 = new Pikachu(100, 27);
-        p1.setFlyingTool(new NoFly());
+        Pikachu p1 = new Pikachu(100, 27,new NoFly());
+        //p1.setFlyingTool(new NoFly());
         p1.performFlyable();
         p1.setFlyingTool(jetpack);
         p1.performFlyable();
         //Pikachu p2 = new Pikachu(100, 28);
-        Charizard c1 = new Charizard(200, 40);
-        c1.setFlyingTool(new Wings());
+        Charizard c1 = new Charizard(200, 40, new Wings());
+        //c1.setFlyingTool(new Wings());
         c1.performFlyable();
         //Squirtle s1 = new Squirtle(120, 21);
 
