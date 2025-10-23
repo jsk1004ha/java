@@ -20,7 +20,7 @@ public class GameDemo {
 
         int turn = 1;
         while(!p1.isFainted() && !c1.isFainted()){
-            System.out.println("턴" + turn + "시작");
+            System.out.println("턴" + turn + " 시작");
             p1.attack(c1);
             if(c1.isFainted()){
                 System.out.println(c1.getName() + "이 기절했습니다! " + p1.getName() + " 승리");
