@@ -15,15 +15,26 @@ public class ExceptionTest {
             System.out.print("input demoninator: ");
 //        double demoninator = scanner.nextInt();
             demoninator = scanner.nextInt();
+            int[] array = {99, -7, 33};
+            System.out.println(array[1]);
+
+            System.out.println(numerator / demoninator);
         }catch (InputMismatchException err){
             System.out.println("숫자를 입력하세요.");
-        }
-
-
-        if(demoninator == 0){
+            System.out.println(err.getMessage());
+        }catch (ArithmeticException err) {
             System.out.println("분모에는 0이 들어갈 수 없습니다.");
-        }else {
-            System.out.println(numerator / demoninator);
+            System.out.println(err.getMessage());
+        }catch (ArrayIndexOutOfBoundsException err){
+            System.out.println("인덱스 범위 초과");
+            System.out.println(err.getMessage());
+        }catch (Exception err){ // 위에서 알 수 없는 에러 처리
+            System.out.println("에러발생");
+            System.out.println(err.getMessage());
+        }finally {
+            System.out.println("프로그램을 종료합니다.");
+            // 자원 해체등에 필요할때 사용
         }
+
     }
 }
