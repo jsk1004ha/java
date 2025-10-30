@@ -1,4 +1,8 @@
-public class Charizard extends Pokemon{
+package pokemons;
+
+import fly.Wings;
+
+public class Charizard extends Pokemon {
     public Charizard(int hp, int atk, Wings wings){
         super("리자몽", hp, atk, wings); //부모클래스의 생성자 호출
         System.out.println("자몽자몽~");
