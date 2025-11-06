@@ -53,7 +53,7 @@ public class GameDemo {
                 scaner.nextLine(); // 버퍼에 남아있는 값 제거
         }
     }
-        Pokemon enemyPokemon;
+        Pokemon enemyPokemon = null;
         int randomNumber = (int) (Math.random() * 3); // 0~2
         System.out.println("야생의 포켓몬이 나타났다!");
         if (randomNumber == 0)
@@ -69,7 +69,12 @@ public class GameDemo {
         for(int i = 0; i<playerPokemon.skills.length; i++){
             System.out.println(i+1 + "." + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
         }
-//
+
+        System.out.print("select skill: ");
+        int skillNumber = scaner.nextInt() - 1;
+
+        enemyPokemon.setHp(enemyPokemon.getHP() - playerPokemon.skills[skillNumber].getDamage());
+        System.out.println(enemyPokemon.getName() + "의 HP: " + enemyPokemon.getHP());
 //        int turn = 1;
 //        while(!p1.isFainted() && !c1.isFainted()){
 //            System.out.println("턴" + turn + " 시작");
