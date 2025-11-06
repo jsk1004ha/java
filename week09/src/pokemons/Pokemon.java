@@ -8,7 +8,7 @@ public abstract class Pokemon {
     private int hp;
     private int atk;
     protected Flyable flyingTool; // has-a (Aggregation)
-    Skill[] skills;
+    public Skill[] skills;
 
     public Pokemon(String name, int hp, int atk, Flyable flyingTool, Skill[] skills){
         this.name = name;
