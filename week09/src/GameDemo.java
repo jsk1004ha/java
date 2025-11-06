@@ -66,15 +66,23 @@ public class GameDemo {
         System.out.println("배틀 시작");
         System.out.println("=====================");
 
-        for(int i = 0; i<playerPokemon.skills.length; i++){
-            System.out.println(i+1 + "." + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
+        while(true) {
+            for (int i = 0; i < playerPokemon.skills.length; i++) {
+                System.out.println(i + 1 + "." + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
+            }
+
+            System.out.print("select skill: ");
+            int skillNumber = scaner.nextInt() - 1;
+
+            playerPokemon.attack(enemyPokemon, skillNumber);
+
+            if(enemyPokemon.isFainted() || playerPokemon.isFainted()){
+                break;
+            }
+//            enemyPokemon.setHp(enemyPokemon.getHP() - playerPokemon.skills[skillNumber].getDamage());
+//            System.out.println(enemyPokemon.getName() + "의 HP: " + enemyPokemon.getHP());
         }
-
-        System.out.print("select skill: ");
-        int skillNumber = scaner.nextInt() - 1;
-
-        enemyPokemon.setHp(enemyPokemon.getHP() - playerPokemon.skills[skillNumber].getDamage());
-        System.out.println(enemyPokemon.getName() + "의 HP: " + enemyPokemon.getHP());
+        System.out.println("배틀종료");
 //        int turn = 1;
 //        while(!p1.isFainted() && !c1.isFainted()){
 //            System.out.println("턴" + turn + " 시작");

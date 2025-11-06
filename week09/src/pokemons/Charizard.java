@@ -9,10 +9,10 @@ public class Charizard extends Pokemon {
     }
 
     @Override
-    public void attack(Pokemon target) {
-        int damage = getAtk() + 5;
+    public void attack(Pokemon target, int choice) {
+        int damage = this.skills[choice].getDamage();
         //System.out.println(getName() + " -> " + target.getName()); //name is private
-        System.out.println(name + " -> " + target.getName() + "에게 '연옥' 사용! (데미지: " + damage + ")");//name is protected
+        System.out.println(name + " -> " + target.getName() + "에게 '"+ this.skills[choice].getName() + "' 사용! (데미지: " + damage + ")");//name is protected
         //target.setHp(target.getHP() - damage);
         target.receiveDamage(damage);
         System.out.println(target.name + "의 남은 HP: " + target.getHP());
