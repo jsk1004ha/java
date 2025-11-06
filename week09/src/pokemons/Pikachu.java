@@ -10,7 +10,7 @@ public class Pikachu extends Pokemon {
 
     @Override
     public void attack(Pokemon target, int choice) {
-        int damage = this.skills[choice].getDamage();
+        int damage = getAtk() + 5 + this.skills[choice].getDamage();
         //System.out.println(getName() + " -> " + target.getName()); //name is private
         System.out.println(name + " -> " + target.getName() + "에게 '"+ this.skills[choice].getName() + "' 사용! (데미지: " + damage + ")");//name is protected
         //target.setHp(target.getHP() - damage);
