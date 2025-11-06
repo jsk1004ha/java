@@ -3,8 +3,8 @@ package pokemons;
 import fly.NoFly;
 
 public class Pikachu extends Pokemon {
-    public Pikachu(int hp, int atk, NoFly noFly){
-        super("피카츄", hp, atk, noFly); //부모클래스의 생성자 호출
+    public Pikachu(int hp, int atk, NoFly noFly, Skill[] skills){
+        super("피카츄", hp, atk, noFly, skills); //부모클래스의 생성자 호출
         System.out.println("피카피카~");
     }
 
